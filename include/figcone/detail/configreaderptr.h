@@ -41,7 +41,7 @@ public:
 
     operator bool() const
     {
-        return reader_;
+        return reader_ != nullptr;
     }
 
 private:
