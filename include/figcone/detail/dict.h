@@ -4,7 +4,7 @@
 #include "inode.h"
 #include "param.h"
 #include "utils.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/type_traits.h"
 #include <figcone_tree/tree.h>
 #include <map>
 #include <string>

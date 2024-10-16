@@ -8,9 +8,9 @@
 #include "detail/configreaderptr.h"
 #include "detail/creatormode.h"
 #include "detail/dictcreator.h"
-#include "detail/external/pfr.hpp"
-#include "detail/external/sfun/path.h"
-#include "detail/external/sfun/type_traits.h"
+#include "boost/pfr.hpp"
+#include "sfun/path.h"
+#include "sfun/type_traits.h"
 #include "detail/fieldtraits.h"
 #include "detail/figcone_ini_import.h"
 #include "detail/figcone_json_import.h"
@@ -59,8 +59,8 @@ constexpr auto canBeReadAsParam()
 {
     return detail::is_string_streamable_v<TField> || //
             sfun::is_complete_type_v<StringConverter<TField>> ||
-            detail::is_string_streamable_v<tree::sfun::remove_optional_t<TField>> ||
-            sfun::is_complete_type_v<StringConverter<tree::sfun::remove_optional_t<TField>>>;
+            detail::is_string_streamable_v<sfun::remove_optional_t<TField>> ||
+            sfun::is_complete_type_v<StringConverter<sfun::remove_optional_t<TField>>>;
 }
 } //namespace detail
 
@@ -391,7 +391,7 @@ private:
     template<typename TCfg, std::size_t... indices>
     void loadStructure(TCfg& cfg, std::index_sequence<indices...>)
     {
-        (loadField(cfg, pfr::get<indices>(cfg), pfr::get_name<indices, TCfg>()), ...);
+        (loadField(cfg, boost::pfr::get<indices>(cfg), boost::pfr::get_name<indices, TCfg>()), ...);
     }
 
     template<typename TCfg>
@@ -403,7 +403,7 @@ private:
                 "Static reflection interface requires C++20. Inherit from figcone::Config to use runtime reflection "
                 "interface");
 #endif
-        loadStructure(cfg, std::make_index_sequence<pfr::tuple_size_v<TCfg>>{});
+        loadStructure(cfg, std::make_index_sequence<boost::pfr::tuple_size_v<TCfg>>{});
     }
 
     template<typename TCfg>

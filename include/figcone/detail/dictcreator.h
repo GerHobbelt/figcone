@@ -4,8 +4,8 @@
 #include "configreaderaccess.h"
 #include "dict.h"
 #include "validator.h"
-#include "external/sfun/contract.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/contract.h"
+#include "sfun/type_traits.h"
 #include <figcone/nameformat.h>
 #include <memory>
 

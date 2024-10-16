@@ -4,7 +4,7 @@
 #include "iconfigentity.h"
 #include "ivalidator.h"
 #include "utils.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/type_traits.h"
 #include <figcone/errors.h>
 #include <functional>
 

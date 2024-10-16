@@ -1,6 +1,7 @@
 #ifndef FIGCONE_FIELDTRAITS_H
 #define FIGCONE_FIELDTRAITS_H
-#include "external/sfun/type_list.h"
+
+#include "sfun/type_list.h"
 #include <type_traits>
 
 namespace figcone {

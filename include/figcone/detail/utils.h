@@ -2,7 +2,7 @@
 #define FIGCONE_UTILS_H
 
 #include "initializedoptional.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/type_traits.h"
 #include <optional>
 #include <type_traits>
 #include <vector>
@@ -39,11 +39,11 @@ inline constexpr auto is_string_streamable_v = is_string_streamable<T>::value;
 
 } //namespace figcone::detail
 
-namespace figcone::sfun {
+namespace sfun {
 template<typename T>
 struct remove_optional<figcone::detail::InitializedOptional<T>> {
     using type = T;
 };
-} //namespace figcone::sfun
+} //namespace sfun
 
 #endif //FIGCONE_UTILS_H

@@ -5,8 +5,8 @@
 #include "iparam.h"
 #include "stringconverter.h"
 #include "utils.h"
-#include "external/sfun/functional.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/functional.h"
+#include "sfun/type_traits.h"
 #include <figcone/errors.h>
 #include <figcone_tree/stringconverter.h>
 #include <figcone_tree/tree.h>

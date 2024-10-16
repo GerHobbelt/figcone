@@ -7,9 +7,9 @@
 #include "node.h"
 #include "utils.h"
 #include "validator.h"
-#include "external/sfun/contract.h"
-#include "external/sfun/type_traits.h"
-#include "external/sfun/utility.h"
+#include "sfun/contract.h"
+#include "sfun/type_traits.h"
+#include "sfun/utility.h"
 #include <figcone/nameformat.h>
 #include <type_traits>
 

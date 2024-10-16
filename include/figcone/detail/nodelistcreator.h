@@ -4,8 +4,8 @@
 #include "configreaderaccess.h"
 #include "creatormode.h"
 #include "nodelist.h"
-#include "external/sfun/contract.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/contract.h"
+#include "sfun/type_traits.h"
 #include <figcone/nameformat.h>
 
 namespace figcone {

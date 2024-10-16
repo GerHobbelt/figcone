@@ -1,8 +1,8 @@
 #ifndef FIGCONE_NAMEUTILS_H
 #define FIGCONE_NAMEUTILS_H
 
-#include "external/sfun/string_utils.h"
-#include "external/sfun/utility.h"
+#include "sfun/string_utils.h"
+#include "sfun/utility.h"
 #include <figcone/nameformat.h>
 #include <algorithm>
 #include <string>

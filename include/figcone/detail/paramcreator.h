@@ -4,7 +4,7 @@
 #include "configreaderaccess.h"
 #include "param.h"
 #include "validator.h"
-#include "external/sfun/contract.h"
+#include "sfun/contract.h"
 
 namespace figcone::detail {
 

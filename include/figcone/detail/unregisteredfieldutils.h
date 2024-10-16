@@ -1,7 +1,7 @@
 #ifndef FIGCONE_UNREGISTEREDFIELDUTILS_H
 #define FIGCONE_UNREGISTEREDFIELDUTILS_H
 
-#include "external/sfun/type_traits.h"
+#include "sfun/type_traits.h"
 #include <figcone/unregisteredfieldhandler.h>
 
 namespace figcone::detail {

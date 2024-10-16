@@ -5,7 +5,7 @@
 #include "inode.h"
 #include "loadingerror.h"
 #include "utils.h"
-#include "external/sfun/type_traits.h"
+#include "sfun/type_traits.h"
 #include <figcone/errors.h>
 #include <figcone_tree/tree.h>
 #include <memory>
