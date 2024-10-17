@@ -32,7 +32,7 @@ struct PhotoViewerCfg {
             figcone::OptionalField<&PhotoViewerCfg::envVars>>;
 };
 
-int main()
+int main(void)
 {
     try {
         auto cfgReader = figcone::ConfigReader{};

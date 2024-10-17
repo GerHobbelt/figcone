@@ -3,7 +3,7 @@
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readTomlFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.toml"));

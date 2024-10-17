@@ -44,7 +44,7 @@ class DemoTreeProvider : public figcone::IParser
     }
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto parser = DemoTreeProvider{};

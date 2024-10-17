@@ -26,7 +26,7 @@ void PostProcessor<PhotoViewerCfg>::operator()(PhotoViewerCfg& cfg)
 }
 } //namespace figcone
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(

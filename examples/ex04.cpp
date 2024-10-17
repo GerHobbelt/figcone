@@ -27,7 +27,7 @@ struct PhotoViewerCfg : public figcone::Config {
     DICT(envVars, StringMap)();
 };
 
-int main()
+int main(void)
 {
     try {
         auto cfgReader = figcone::ConfigReader{};

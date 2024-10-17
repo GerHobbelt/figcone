@@ -23,7 +23,7 @@ struct PhotoViewerCfg : public figcone::Config{
     FIGCONE_NODE(thumbnailSettings, ThumbnailCfg);
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(

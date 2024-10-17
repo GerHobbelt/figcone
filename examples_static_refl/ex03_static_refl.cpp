@@ -39,7 +39,7 @@ struct PhotoViewerCfg {
     using traits = figcone::FieldTraits<figcone::OptionalField<&PhotoViewerCfg::envVars>>;
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readYaml<PhotoViewerCfg>(R"(

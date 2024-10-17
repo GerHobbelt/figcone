@@ -26,7 +26,7 @@ struct PhotoViewerCfg {
     ThumbnailCfg thumbnailSettings;
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(
@@ -65,7 +65,7 @@ struct PhotoViewerCfg : public figcone::Config{
     FIGCONE_NODE(thumbnailSettings, ThumbnailCfg);
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(
@@ -294,7 +294,7 @@ struct PhotoViewerCfg {
 };
 
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader<figcone::NameFormat::SnakeCase>{};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(
@@ -413,7 +413,7 @@ A JSON config that matches the configuration listed in [`demo.h`](#demoh) earlie
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readJsonFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.json"));
@@ -433,7 +433,7 @@ template argument of the used read function:
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfgList = cfgReader.readJsonFile<PhotoViewerCfg, figcone::RootType::NodeList>(
@@ -484,7 +484,7 @@ A YAML config that matches the configuration listed in [`demo.h`](#demoh) earlie
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readYamlFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.yaml"));
@@ -504,7 +504,7 @@ template argument of the used read function:
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfgList = cfgReader.readYamlFile<PhotoViewerCfg, figcone::RootType::NodeList>(
@@ -552,7 +552,7 @@ supportedFiles = [".jpg", "png"]
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readTomlFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.toml"));
@@ -613,7 +613,7 @@ An XML config that matches the configuration listed in [`demo.h`](#demoh) earlie
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readXmlFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.xml"));
@@ -659,7 +659,7 @@ DISPLAY = "0.1"
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readIniFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.ini"));
@@ -713,7 +713,7 @@ supportedFiles = [ ".jpg", "png"]
 #include <figcone/configreader.h>
 #include <iostream>
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readShoalFile<PhotoViewerCfg>(std::filesystem::canonical("../../examples/demo.shoal"));
@@ -774,7 +774,7 @@ class DemoTreeProvider : public figcone::IParser
     }
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto parser = DemoTreeProvider{};
@@ -833,7 +833,7 @@ struct PhotoViewerCfg {
             figcone::OptionalField<&PhotoViewerCfg::envVars>>;
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{};
     auto cfg = cfgReader.readYaml<PhotoViewerCfg>(R"(
@@ -998,7 +998,7 @@ struct PhotoViewerCfg : public figcone::Config{
     DICT(envVars, StringMap)();
 };
 
-int main()
+int main(void)
 {
     try {
         auto cfgReader = figcone::ConfigReader{};
@@ -1085,7 +1085,7 @@ struct PhotoViewerCfg {
             figcone::OptionalField<&PhotoViewerCfg::envVars>>;
 };
 
-int main()
+int main(void)
 {
     try {
         auto cfgReader = figcone::ConfigReader{};

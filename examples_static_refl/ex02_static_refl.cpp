@@ -14,7 +14,7 @@ struct PhotoViewerCfg {
     ThumbnailCfg thumbnailSettings;
 };
 
-int main()
+int main(void)
 {
     auto cfgReader = figcone::ConfigReader{figcone::NameFormat::SnakeCase};
     auto cfg = cfgReader.readToml<PhotoViewerCfg>(R"(
